@@ -3,7 +3,7 @@ var Events = Discordie.Events;
 
 var client = new Discordie();
 
-//client.connect({ token: "NDA5Nzk3NTA1ODI0NDU2NzA2.DVo2cg.Vwd2JZ_7pG6MUs0_RXZ31aVMeWA" });
+client.connect({ token: "NDA5Nzk3NTA1ODI0NDU2NzA2.DVo2cg.Vwd2JZ_7pG6MUs0_RXZ31aVMeWA" });
 
 
 client.Dispatcher.on(Events.GATEWAY_READY, e => {
