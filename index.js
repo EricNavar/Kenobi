@@ -1,18 +1,15 @@
-var Discordie = require("discordie");
-var Events = Discordie.Events;
+const Discord = require('discord.js');
+const client = new Discord.Client();
 
-var client = new Discordie();
-
-client.connect({ token: "NDA5Nzk3NTA1ODI0NDU2NzA2.DVo2cg.Vwd2JZ_7pG6MUs0_RXZ31aVMeWA" });
-
-
-client.Dispatcher.on(Events.GATEWAY_READY, e => {
-console.log("Connected as: " + client.User.username);
+client.on('ready', () => {
+    console.log('I am ready!');
 });
 
-client.Dispatcher.on(Events.MESSAGE_CREATE, e => {
-if (e.message.content.toLowerCase() == "hello there")
-e.message.channel.sendMessage("General Kenobi");
+client.on('message', message => {
+    if (message.content === 'ping') {
+    	message.reply('pong');
+  	}
 });
 
+// THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
