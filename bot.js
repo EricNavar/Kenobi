@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content.toLowerCase() === 'hello there') {
-    	message.reply('General Kenobi');
+    	message.reply('General Kenobi!');
   	}
 });
 
