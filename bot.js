@@ -11,6 +11,7 @@ client.on('message', message => {
     }   else if (content.includes('anime')) {
             message.reply('Bark Bark (Anime is trash. Get help.)');
             message.delete();
+    }
 });
 
 // THIS  MUST  BE  THIS  WAY
