@@ -6,12 +6,20 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-    if (message.content.toLowerCase() === 'hello there') {
+    if (!message.author.bot){
+        content = message.content.toLowerCase()
+        
+        if (message.content.toLowerCase() === 'hello there') {
     	message.reply('General Kenobi!');
-    }   else if (content.includes('anime')) {
-            message.reply('Bark Bark (Anime is trash. Get help.)');
+        }   else if (content.includes('anime')) {
+            message.reply('Anime is trash. Get help.');
+            message.delete();
+        }   
+        
+        
     }
+
 });
 
 // THIS  MUST  BE  THIS  WAY
-client.login(process.env.BOT_TOKEN);
+client.login("NDA5Nzk3NTA1ODI0NDU2NzA2.DYtQPg.HE8mToPQj2Mj4Owbia5iTzmAMFc");
