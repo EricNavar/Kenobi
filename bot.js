@@ -10,7 +10,6 @@ client.on('message', message => {
     	message.reply('General Kenobi!');
     }   else if (content.includes('anime')) {
             message.reply('Bark Bark (Anime is trash. Get help.)');
-            message.delete();
     }
 });
 
