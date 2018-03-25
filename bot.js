@@ -20,7 +20,7 @@ client.on('message', message => {
             }
                 
             
-        }   else if (content.equals("username"))
+        }   else if (content.equals("username")) {
             message.reply(message.author.username);
         }
         
