@@ -10,7 +10,8 @@ client.on('message', message => {
         content = message.content.toLowerCase()
         
         if (content === 'hello there') {
-    	message.reply('General Kenobi!');
+    	message.reply('General Kenobi!',{
+                    file: "general.gif"});
         }   else if (content.includes('anime')) {
             if (content !== "anime"  && content !== "anime is trash"){
                 message.reply('Anime is trash. Get help.',{
