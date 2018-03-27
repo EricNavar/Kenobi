@@ -12,21 +12,24 @@ client.on('message', message => {
         if (content === 'hello there') {
     	message.reply('General Kenobi!');
         }   else if (content.includes('anime')) {
-            if (!content.equals("anime") && !content.equals("Anime is trash")){
-                message.reply('Anime is trash. Get help.');
-                message.delete();
-            } else if (message.author.username.equals("a")) {
-                message.reply('Anime is trash. Get help.');
-            }
+            if (content !== "anime"  && content !== "anime is trash"){
+                message.reply('Anime is trash. Get help.',{
+                    file: "stop.gif"});
                 
-            
-        }   else if (content.equals("username")) {
-            message.reply(message.author.username);
-        }
-        
+
+            } 
+            else if(content === "anime is trash")     
+            {
+                message.reply('I am glad you have learned my boy.');
+            }
+        }   
     }
 
 });
+
+// THIS  MUST  BE  THIS  WAY
+//client.login("NDA5Nzk3NTA1ODI0NDU2NzA2.DZsj2g.dr5EEm_bPn4eZ4JYAnQgHUa7r_g");
+//NDA5Nzk3NTA1ODI0NDU2NzA2.DZsj2g.dr5EEm_bPn4eZ4JYAnQgHUa7r_g
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
