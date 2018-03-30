@@ -16,6 +16,7 @@ client.on('message', message => {
             if (content !== "anime"  && content !== "anime is trash"){
                 message.reply('Anime is trash. Get help.',{
                     file: "stop.gif"});
+                message.react('💩');
                 
 
             } 
@@ -23,7 +24,9 @@ client.on('message', message => {
             {
                 message.reply('I am glad you have learned my boy.');
             }
-        }   
+        }   else if (content.includes('press f')){
+            message.channel.send('F');
+        }
     }
 
 });
